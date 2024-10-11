@@ -1,8 +1,5 @@
 #include "hook.h"
 
-//struct of the old function entry data
-_IMAGE_THUNK_DATA64 old_entry_data;
-
 /*
 This function using for hook any function on any IAT table of any DLL by function LOOKUP NAME only.
 input:
@@ -140,4 +137,10 @@ void ShowMsgHook(
 
 	//show hook message to the user
 	MessageBoxA(0, "CreateFileA hooked successfully !", "AI-fergan", 0);
+
+	//cast the old function address to CreateFileA function type
+	CreateFileA_t original_CreateFileA = (CreateFileA_t)old_entry_data.u1.Function;
+
+	//run old CreateFileA function
+	original_CreateFileA(lpFileName, dwDesiredAccess, dwShareMode, lpSecurityAttributes, dwCreationDisposition, dwFlagsAndAttributes, hTemplateFile);
 }

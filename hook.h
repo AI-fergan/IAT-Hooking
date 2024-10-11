@@ -4,6 +4,20 @@
 
 #include "pch.h"
 
+//CreateFileA function type
+typedef HANDLE(*CreateFileA_t)(
+	LPCSTR,
+	DWORD,
+	DWORD,
+	LPSECURITY_ATTRIBUTES,
+	DWORD,
+	DWORD,
+	HANDLE
+	);
+
+//struct of the old function entry data
+static _IMAGE_THUNK_DATA64 old_entry_data;
+
 //hook dll function
 int hook(PCSTR func_to_hook, PCSTR DLL_to_hook, _IMAGE_THUNK_DATA64 new_entry_data);
 
