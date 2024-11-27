@@ -14,4 +14,4 @@ In the hook file you can find the algorithm of the function that executes the ho
  - [IAT-Hooking](ired.team/offensive-security/code-injection-process-injection/import-adress-table-iat-hooking)
 
 ## Demo
-[![Watch the video](https://raw.githubusercontent.com/username/repository/branch/path/to/thumbnail.jpg)](https://raw.githubusercontent.com/username/repository/branch/path/to/video.mp4)
+[![Demo](https://github.com/AI-fergan/IAT-Hooking/blob/main/demo-files/demo.png)](https://github.com/AI-fergan/IAT-Hooking/blob/main/demo-files/demo.mp4)
